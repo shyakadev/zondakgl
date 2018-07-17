@@ -1,0 +1,66 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>Zonda Kgl</ion-title>
+  </ion-navbar>
+
+
+<!--<ion-content padding>
+  <h2>Welcome to Ionic! Savior</h2>
+  <p>
+    This starter project comes with simple tabs-based layout for apps
+    that are going to primarily use a Tabbed UI.
+  </p>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p>
+</ion-content>--
+
+<ion-toolbar no-border-top>
+  <!--<ion-searchbar (click)="showAddressModal()" [(ngModel)]="address.place.desc" type="text" placeholder="Pick an address" color="primary">
+  </ion-searchbar>--
+  <ion-searchbar (click)="showAddressModal()" type="text" placeholder="Pick an address" color="primary">
+  </ion-searchbar>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="map-page">
+  <div style="height: 100%; width: 100%" #mapCanvas id="map_canvas"></div>
+</ion-content>-->
+
+<ion-header>
+    <!--<ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button (click)="close()">Cancel</button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button [disabled]="saveDisabled" ion-button (click)="save()">Save</button>
+        </ion-buttons>
+    </ion-navbar>-->
+    <ion-navbar>
+    <ion-title>Zonda Kgl</ion-title>
+  </ion-navbar>
+ 
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="query" (ionInput)="searchPlace()"></ion-searchbar>
+    </ion-toolbar>
+ 
+    <ion-list>
+        <ion-item *ngFor="let place of places" (touchstart)="selectPlace(place)">{{place.description}}</ion-item>
+    </ion-list>
+ 
+</ion-header>
+ 
+<ion-content>
+ 
+    <div #pleaseConnect id="please-connect">
+        <p>Please connect to the Internet...</p>
+    </div>
+ 
+    <div #map id="map">
+        <ion-spinner></ion-spinner>
+    </div>
+ 
+</ion-content>
+
