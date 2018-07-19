@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SoccasionPage } from '../pages/soccasion/soccasion';
+import { WalletPage } from '../pages/wallet/wallet';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +22,8 @@ import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
     ContactPage,
     HomePage,
     TabsPage,
-    SoccasionPage
+    SoccasionPage,
+    WalletPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
     ContactPage,
     HomePage,
     TabsPage,
-    SoccasionPage
+    SoccasionPage,
+    WalletPage
   ],
   providers: [
     StatusBar,
