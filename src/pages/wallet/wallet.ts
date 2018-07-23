@@ -19,25 +19,27 @@ checkBoxResult;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
 
+  
+  }
   doCheck(){
   let alert = this.alertCtrl.create();
   alert.setTitle('Which account do you want to use ?');
 
   alert.addInput({
-  type: 'checkbox',
+  type: 'radio',
   label: 'MTN MoMo',
   value: 'MTN MoMo',
   check: true
   });
 
 alert.addInput({
-  type: 'checkbox',
+  type: 'radio',
   label: 'Tigo Cach',
   value: 'Tigo Cach'
   });
 
 alert.addInput({
-  type: 'checkbox',
+  type: 'radio',
   label: 'Tigo Cach',
   value: 'Tigo Cach'
   });
@@ -55,7 +57,6 @@ alert.addInput({
   alert.present().then(() => {
   this.checkBoxOpen = true;
   });
-  }
   }
 
   ionViewDidLoad() {
