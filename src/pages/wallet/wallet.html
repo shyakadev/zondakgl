@@ -9,7 +9,6 @@
   <ion-navbar>
     <ion-title>Wallet</ion-title>
   </ion-navbar>
-
   <div padding>
   	<ion-segment>
   	<ion-segment-button>
@@ -38,7 +37,7 @@ Top Up
 </ion-list-header>
 </ion-list>
 
-<ion-grid>
+<ion-grid class="tops">
 <ion-row>
 <ion-col col-4>
 <ion-img width="50" height= "50" src="..."></ion-img>
@@ -60,37 +59,11 @@ Top Up
 <ion-img width="50" height= "50" src="..."></ion-img>
 <p>Tigo Cash</p>
 </ion-col>
+</ion-row>
+<ion-row>
+<button ion-button block (click)="doCheck()">Withdraw</button>
 </ion-row>
 
-<div class="bar bar-subheader">
-	<ion-list>
-	<ion-list-header>
-  <h6 class="title">Withdraw</h6>
-</ion-list-header>
-</ion-list>
-</div>
-<ion-row>
-<ion-col col-4>
-<ion-img width="50" height= "50" src="..."></ion-img>
-<p>Visa Card</p>
-</ion-col>
-<ion-col col-4>
-<ion-img width="50" height= "50" src="..."></ion-img>
-<p>Master Card</p>
-</ion-col>
-<ion-col col-4>
-<ion-img width="50" height= "50" src="..."></ion-img>
-<p>MTN MM</p>
-</ion-col>
-<ion-col col-4>
-<ion-img width="50" height= "50" src="..."></ion-img>
-<p>Airtel Money</p>
-</ion-col>
-<ion-col col-4>
-<ion-img width="50" height= "50" src="..."></ion-img>
-<p>Tigo Cash</p>
-</ion-col>
-</ion-row>
 
 </ion-grid>
 </ion-content>

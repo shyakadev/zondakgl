@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 
 /**
  * Generated class for the WalletPage page.
@@ -10,11 +10,52 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-wallet',
-  templateUrl: 'wallet.html',
+  templateUrl: 'wallet.html'
 })
 export class WalletPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+checkBoxOpen: boolean;
+checkBoxResult;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
+
+  doCheck(){
+  let alert = this.alertCtrl.create();
+  alert.setTitle('Which account do you want to use ?');
+
+  alert.addInput({
+  type: 'checkbox',
+  label: 'MTN MoMo',
+  value: 'MTN MoMo',
+  check: true
+  });
+
+alert.addInput({
+  type: 'checkbox',
+  label: 'Tigo Cach',
+  value: 'Tigo Cach'
+  });
+
+alert.addInput({
+  type: 'checkbox',
+  label: 'Tigo Cach',
+  value: 'Tigo Cach'
+  });
+
+  alert.addButton('Cancel');
+
+  alert.addButton({
+  text:'Okay',
+  handler: data => {
+   this.checkBoxOpen = false;
+   this.checkBoxResult = data;
+  }
+  });
+
+  alert.present().then(() => {
+  this.checkBoxOpen = true;
+  });
+  }
   }
 
   ionViewDidLoad() {
