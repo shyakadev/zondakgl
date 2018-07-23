@@ -27,7 +27,7 @@ checkBoxResult;
 
   alert.addInput({
   type: 'radio',
-  label: 'MTN MoM',
+  label: 'MTN MoMo',
   value: 'MTN MoMo',
   check: true
   });
