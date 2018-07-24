@@ -29,7 +29,6 @@ checkBoxResult;
   type: 'radio',
   label: 'MTN MoMo',
   value: 'MTN MoMo',
-  check: true
   });
 
 alert.addInput({
